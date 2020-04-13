@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -18,82 +18,37 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\SSCode\SSAngle.cpp" />
-    <ClCompile Include="..\..\SSCode\SSConstellation.cpp" />
-    <ClCompile Include="..\..\SSCode\SSCoords.cpp" />
-    <ClCompile Include="..\..\SSCode\SSDynamics.cpp" />
-    <ClCompile Include="..\..\SSCode\SSIdentifier.cpp" />
-    <ClCompile Include="..\..\SSCode\SSImportGJ.cpp" />
-    <ClCompile Include="..\..\SSCode\SSImportHIP.cpp" />
-    <ClCompile Include="..\..\SSCode\SSImportMPC.cpp" />
-    <ClCompile Include="..\..\SSCode\SSImportNGCIC.cpp" />
-    <ClCompile Include="..\..\SSCode\SSImportSKY2000.cpp" />
-    <ClCompile Include="..\..\SSCode\SSJPLDEphemeris.cpp" />
-    <ClCompile Include="..\..\SSCode\SSMatrix.cpp" />
-    <ClCompile Include="..\..\SSCode\SSObject.cpp" />
-    <ClCompile Include="..\..\SSCode\SSOrbit.cpp" />
-    <ClCompile Include="..\..\SSCode\SSPlanet.cpp" />
-    <ClCompile Include="..\..\SSCode\SSStar.cpp" />
-    <ClCompile Include="..\..\SSCode\SSTime.cpp" />
-    <ClCompile Include="..\..\SSCode\SSTLE.cpp" />
-    <ClCompile Include="..\..\SSCode\SSUtilities.cpp" />
-    <ClCompile Include="..\..\SSCode\SSVector.cpp" />
-    <ClCompile Include="..\SSTest.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\SSCode\SSAngle.hpp" />
-    <ClInclude Include="..\..\SSCode\SSConstellation.hpp" />
-    <ClInclude Include="..\..\SSCode\SSCoords.hpp" />
-    <ClInclude Include="..\..\SSCode\SSDynamics.hpp" />
-    <ClInclude Include="..\..\SSCode\SSIdentifier.hpp" />
-    <ClInclude Include="..\..\SSCode\SSImportGJ.hpp" />
-    <ClInclude Include="..\..\SSCode\SSImportHIP.hpp" />
-    <ClInclude Include="..\..\SSCode\SSImportMPC.hpp" />
-    <ClInclude Include="..\..\SSCode\SSImportNGCIC.hpp" />
-    <ClInclude Include="..\..\SSCode\SSImportSKY2000.hpp" />
-    <ClInclude Include="..\..\SSCode\SSJPLDEphemeris.hpp" />
-    <ClInclude Include="..\..\SSCode\SSMatrix.hpp" />
-    <ClInclude Include="..\..\SSCode\SSObject.hpp" />
-    <ClInclude Include="..\..\SSCode\SSOrbit.hpp" />
-    <ClInclude Include="..\..\SSCode\SSPlanet.hpp" />
-    <ClInclude Include="..\..\SSCode\SSStar.hpp" />
-    <ClInclude Include="..\..\SSCode\SSTime.hpp" />
-    <ClInclude Include="..\..\SSCode\SSTLE.hpp" />
-    <ClInclude Include="..\..\SSCode\SSUtilities.hpp" />
-    <ClInclude Include="..\..\SSCode\SSVector.hpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{81A19F8E-7902-4542-A821-119B5BB8A39C}</ProjectGuid>
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{F3984CD1-DDCB-4BA6-8805-1B992D4ED867}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SSTest</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <RootNamespace>Core</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -131,75 +86,119 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;CORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\SSCode;</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>..\..\SSCode</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>
+      </MultiProcessorCompilation>
+      <OmitFramePointers />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>true</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;CORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\SSCode;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;CORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\SSCode;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;CORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\SSCode;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\SSCode\SSAngle.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSConstellation.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSCoords.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSDynamics.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSIdentifier.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSImportGJ.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSImportHIP.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSImportMPC.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSImportNGCIC.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSImportSKY2000.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSJPLDEphemeris.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSMatrix.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSObject.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSOrbit.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSPlanet.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSStar.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSTime.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSTLE.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSUtilities.hpp" />
+    <ClInclude Include="..\..\..\SSCode\SSVector.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\SSCode\SSAngle.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSConstellation.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSCoords.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSDynamics.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSIdentifier.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSImportGJ.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSImportHIP.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSImportMPC.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSImportNGCIC.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSImportSKY2000.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSJPLDEphemeris.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSMatrix.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSObject.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSOrbit.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSPlanet.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSStar.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSTime.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSTLE.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSUtilities.cpp" />
+    <ClCompile Include="..\..\..\SSCode\SSVector.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
