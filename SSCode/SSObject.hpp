@@ -12,6 +12,7 @@
 #include <math.h>
 
 #include <string>
+#include <memory>
 #include <vector>
 #include <map>
 
@@ -95,6 +96,7 @@ public:
 };
 
 typedef shared_ptr<SSObject> SSObjectPtr;
+typedef shared_ptr<SSObject> CMBblah;
 typedef vector<SSObjectPtr> SSObjectVec;
 typedef map<SSIdentifier,int> SSObjectMap;
 
